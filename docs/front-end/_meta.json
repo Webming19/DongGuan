@@ -1,0 +1,21 @@
+[
+  {
+    "type": "file",
+    "name": "index",
+    "label": "前端知识"
+  },
+  {
+    "type": "dir",
+    "name": "透视HTTP协议",
+    "label": "透视HTTP",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "JavaScript核心原理",
+    "label": "JavaScript核心原理",
+    "collapsible": true,
+    "collapsed": true
+  }
+]
