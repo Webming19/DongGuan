@@ -1,12 +1,12 @@
 [
   {
-    "text": "Markdown知识",
-    "link": "/guide/",
-    "activeMatch": "/guide/"
-  },
-  {
     "text": "前端知识",
     "link": "/front-end/",
     "activeMatch": "/front-end/"
+  },
+  {
+    "text": "Markdown知识",
+    "link": "/guide/",
+    "activeMatch": "/guide/"
   }
 ]

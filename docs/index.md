@@ -8,21 +8,21 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /front-end/
-#    - theme: alt
-#      text: Github
-#      link: https://github.com/web-infra-dev/rspress
+      link: /guide/
+    - theme: alt
+      text: 其他站点
+      link: https://website.webming0119.eu.org/
   image:
     src: /rspress-icon.png
-    alt: Rspress Demo Logo
+    alt: DongGuan Logo
 features:
+  - title: 东观
+    details: 东观，中国东汉宫廷中贮藏档案、典籍和从事校书、著述的处所。
+    icon: 🏯
+  - title: 内容
+    details: 该网站主要用于存储学习资料、查阅资料，收集自互联网上的各种文章。
+    icon: 📚
   - title: 使用Rspress构建
     details: 基于 Rust 构建的 Rspress 搭建，速度非常快。
     icon: 📦
-  - title: Built-in full-text search
-    details: Automatically generates a full-text search index for you during construction, providing out-of-the-box full-text search capabilities.
-    icon: 🎨
-  - title: Simpler I18n solution
-    details: With the built-in I18n solution, you can easily provide multi-language support for documents or components.
-    icon: 🌍
 ---
