@@ -17,5 +17,19 @@
     "label": "JavaScript核心原理",
     "collapsible": true,
     "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "玩转Vue 3全家桶",
+    "label": "玩转Vue 3全家桶",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "全栈工程师修炼指南",
+    "label": "全栈工程师修炼指南",
+    "collapsible": true,
+    "collapsed": true
   }
 ]
