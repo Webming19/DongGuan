@@ -1,21 +1,12 @@
 [
   {
-    "text": "Guide",
+    "text": "Markdown知识",
     "link": "/guide/",
     "activeMatch": "/guide/"
   },
   {
-    "text": "Hello World",
-    "link": "/hello/",
-    "activeMatch": "/hello/"
-  },
-  {
-    "text": "Front End",
+    "text": "前端知识",
     "link": "/front-end/",
     "activeMatch": "/front-end/"
-  },
-  {
-    "text": "API",
-    "link": "https://rspress.dev/api/index.html"
   }
 ]
