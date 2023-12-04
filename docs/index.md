@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /guide/
+      link: /front-end/
     - theme: alt
       text: 其他站点
       link: https://website.webming0119.eu.org/
