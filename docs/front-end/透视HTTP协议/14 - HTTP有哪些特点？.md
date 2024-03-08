@@ -101,5 +101,3 @@ HTTP的请求-应答模式也恰好契合了传统的C/S（Client/Server）系�
 欢迎你把自己的答案写在留言区，与我和其他同学一起讨论。如果你觉得有所收获，欢迎你把文章分享给你的朋友。
 
 ![unpreview](/front-end/透视HTTP/a233c19f92c566614e4e0facbaeab27d.png)
-
-![unpreview](/front-end/透视HTTP/56d766fc04654a31536f554b8bde7b63.jpg)

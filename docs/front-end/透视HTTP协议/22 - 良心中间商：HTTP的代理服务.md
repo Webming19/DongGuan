@@ -143,5 +143,3 @@ Host: www.xxx.com\r\n
 欢迎你把自己的学习体会写在留言区，与我和其他同学一起讨论。如果你觉得有所收获，也欢迎把文章分享给你的朋友。
 
 ![unpreview](/front-end/透视HTTP/a8122180bd01e05613d75d34962da79f.png)
-
-![unpreview](/front-end/透视HTTP/56d766fc04654a31536f554b8bde7b63.jpg)

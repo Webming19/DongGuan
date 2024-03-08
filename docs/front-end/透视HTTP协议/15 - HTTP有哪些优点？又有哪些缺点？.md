@@ -121,5 +121,3 @@ HTTP协议基于TCP/IP，并且使用了“请求-应答”的通信模式，所
 欢迎你把自己的答案写在留言区，与我和其他同学一起讨论。如果你觉得有所收获，欢迎你把文章分享给你的朋友。
 
 ![unpreview](/front-end/透视HTTP/7573b0a37ed275bbf6c94eb20875b1ad.png)
-
-![unpreview](/front-end/透视HTTP/56d766fc04654a31536f554b8bde7b63.jpg)

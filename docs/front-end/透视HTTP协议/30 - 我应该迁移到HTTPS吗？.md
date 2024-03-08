@@ -183,5 +183,3 @@ add_header Strict-Transport-Security max-age=15768000; #182.5days
 欢迎你把自己的学习体会写在留言区，与我和其他同学一起讨论。如果你觉得有所收获，也欢迎把文章分享给你的朋友。
 
 ![unpreview](/front-end/透视HTTP/dbe386f94df8f69fc0b32d2b52e3b3ec.png)
-
-![unpreview](/front-end/透视HTTP/56d766fc04654a31536f554b8bde7b63.jpg)

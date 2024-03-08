@@ -125,5 +125,3 @@ Chrome等浏览器自带的开发者工具也可以很好地观察客户端延�
 欢迎你把自己的学习体会写在留言区，与我和其他同学一起讨论。如果你觉得有所收获，也欢迎把文章分享给你的朋友。
 
 ![unpreview](/front-end/透视HTTP/fbc85df2c908cb8fa6bffde6ea989732.png)
-
-![unpreview](/front-end/透视HTTP/56d766fc04654a31536f554b8bde7b63.jpg)
