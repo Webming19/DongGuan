@@ -15,7 +15,6 @@
   D：global.eval(x)
 
 参考《JavaScript核心原理解析》第21讲。
-
 ```
 
 ```
@@ -26,11 +25,4 @@
   D：with ({eval}) eval('var x = 100')
 
 参考《JavaScript核心原理解析》第22讲。
-
 ```
-
-接下来的这套测试题中共有 20 道题目，包括19道单选题，1道多选题，满分 100 分，系统会自动评分。
-
-点击下面按钮，马上开始测试吧！
-
-[![](/front-end/JavaScript核心原理/28d1be62669b4f3cc01c36466bf811a4.png)](http://time.geekbang.org/quiz/intro?act_id=186&exam_id=434)
