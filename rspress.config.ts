@@ -3,7 +3,6 @@ import { defineConfig } from 'rspress/config';
 
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
-  lang: 'zh',
   title: 'DongGuan',
   description: 'Rspack-based Static Site Generator',
   icon: "/rspress-icon.png",
@@ -13,7 +12,7 @@ export default defineConfig({
   },
   themeConfig: {
     socialLinks: [
-      { icon: 'github', mode: 'link', content: 'https://github.com/web-infra-dev/rspress' },
+      { icon: 'github', mode: 'link', content: 'https://website.ethanhan.eu.org/DongGuan/' },
     ],
   },
   base: '/DongGuan/',
