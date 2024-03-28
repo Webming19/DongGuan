@@ -3,7 +3,7 @@
 
 你好，我是Chrono。
 
-先要说一声“抱歉”。由于工作比较紧张、项目实施频繁出差，导致原本预定的“答疑篇”迟迟没有进展，这次趁着“十一”长假，总算赶出了两期，集中回答几个同学们问得比较多的问题：Linux/Mac实验环境搭建（ [第7讲](https://time.geekbang.org/column/article/100124)），URI查询参数（ [第11讲](https://time.geekbang.org/column/article/102008)），还有DHE/ECDHE算法的原理（ [第26讲](https://time.geekbang.org/column/article/110354)），后续有时间可能还会再陆续补充完善。
+先要说一声“抱歉”。由于工作比较紧张、项目实施频繁出差，导致原本预定的“答疑篇”迟迟没有进展，这次趁着“十一”长假，总算赶出了两期，集中回答几个同学们问得比较多的问题：Linux/Mac实验环境搭建（ [第7讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/07%20-%20%E5%9F%9F%E5%90%8D%E9%87%8C%E6%9C%89%E5%93%AA%E4%BA%9B%E9%97%A8%E9%81%93%EF%BC%9F.html)），URI查询参数（ [第11讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/11%20-%20%E5%BA%94%E8%AF%A5%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95%EF%BC%9F.html)），还有DHE/ECDHE算法的原理（ [第26讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/26%20-%20%E5%9B%BA%E8%8B%A5%E9%87%91%E6%B1%A4%E7%9A%84%E6%A0%B9%E6%9C%AC%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E4%B8%8E%E8%AF%81%E4%B9%A6.html)），后续有时间可能还会再陆续补充完善。
 
 很高兴在时隔一个多月后与你再次见面，废话不多说了，让我们开始吧。
 
@@ -150,7 +150,7 @@ tcpdump、tshark和Linux里的许多工具一样，参数繁多、功能强大�
 
 ## URI的查询参数和头字段
 
-在 [第11讲](https://time.geekbang.org/column/article/102008) 里我留了一个课下作业：
+在 [第11讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/11%20-%20%E5%BA%94%E8%AF%A5%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95%EF%BC%9F.html) 里我留了一个课下作业：
 
 “URI的查询参数和头字段很相似，都是key-value形式，都可以任意自定义，那么它们在使用时该如何区别呢？”
 

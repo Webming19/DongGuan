@@ -3,7 +3,7 @@
 
 从今天开始，我们开始进入全新的“安全篇”，聊聊与安全相关的HTTPS、SSL、TLS。
 
-在 [第14讲](https://time.geekbang.org/column/article/103746) 中，我曾经谈到过HTTP的一些缺点，其中的“无状态”在加入Cookie后得到了解决，而另两个缺点——“明文”和“不安全”仅凭HTTP自身是无力解决的，需要引入新的HTTPS协议。
+在 [第14讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/14%20-%20HTTP%E6%9C%89%E5%93%AA%E4%BA%9B%E7%89%B9%E7%82%B9%EF%BC%9F.html) 中，我曾经谈到过HTTP的一些缺点，其中的“无状态”在加入Cookie后得到了解决，而另两个缺点——“明文”和“不安全”仅凭HTTP自身是无力解决的，需要引入新的HTTPS协议。
 
 ## 为什么要有HTTPS？
 

@@ -94,14 +94,14 @@ Nginx里的handler模块和filter模块就是按照“职责链”模式设计�
 
 我简单列几个与我们的课程相关的模块吧：
 
-- charset模块实现了字符集编码转换；（ [第15讲](https://time.geekbang.org/column/article/104024)）
-- chunked模块实现了响应数据的分块传输；（ [第16讲](https://time.geekbang.org/column/article/104456)）
-- range模块实现了范围请求，只返回数据的一部分；（ [第16讲](https://time.geekbang.org/column/article/104456)）
-- rewrite模块实现了重定向和跳转，还可以使用内置变量自定义跳转的URI；（ [第18讲](https://time.geekbang.org/column/article/105614)）
-- not\_modified模块检查头字段“if-Modified-Since”和“If-None-Match”，处理条件请求；（ [第20讲](https://time.geekbang.org/column/article/106804)）
-- realip模块处理“X-Real-IP”“X-Forwarded-For”等字段，获取客户端的真实IP地址；（ [第21讲](https://time.geekbang.org/column/article/107577)）
-- ssl模块实现了SSL/TLS协议支持，读取磁盘上的证书和私钥，实现TLS握手和SNI、ALPN等扩展功能；（ [安全篇](https://time.geekbang.org/column/article/108643)）
-- http\_v2模块实现了完整的HTTP/2协议。（ [飞翔篇](https://time.geekbang.org/column/article/112036)）
+- charset模块实现了字符集编码转换；（ [第15讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/15%20-%20HTTP%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BC%98%E7%82%B9%EF%BC%9F%E5%8F%88%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BC%BA%E7%82%B9%EF%BC%9F.html)）
+- chunked模块实现了响应数据的分块传输；（ [第16讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/16%20-%20%E6%B5%B7%E7%BA%B3%E7%99%BE%E5%B7%9D%EF%BC%9AHTTP%E7%9A%84%E5%AE%9E%E4%BD%93%E6%95%B0%E6%8D%AE.html)）
+- range模块实现了范围请求，只返回数据的一部分；（ [第16讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/16%20-%20%E6%B5%B7%E7%BA%B3%E7%99%BE%E5%B7%9D%EF%BC%9AHTTP%E7%9A%84%E5%AE%9E%E4%BD%93%E6%95%B0%E6%8D%AE.html)）
+- rewrite模块实现了重定向和跳转，还可以使用内置变量自定义跳转的URI；（ [第18讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/18%20-%20%E6%8E%92%E9%98%9F%E4%B9%9F%E8%A6%81%E8%AE%B2%E6%95%88%E7%8E%87%EF%BC%9AHTTP%E7%9A%84%E8%BF%9E%E6%8E%A5%E7%AE%A1%E7%90%86.html)）
+- not\_modified模块检查头字段“if-Modified-Since”和“If-None-Match”，处理条件请求；（ [第20讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/20%20-%20%E8%AE%A9%E6%88%91%E7%9F%A5%E9%81%93%E4%BD%A0%E6%98%AF%E8%B0%81%EF%BC%9AHTTP%E7%9A%84Cookie%E6%9C%BA%E5%88%B6.html)）
+- realip模块处理“X-Real-IP”“X-Forwarded-For”等字段，获取客户端的真实IP地址；（ [第21讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/21%20-%20%E7%94%9F%E9%B2%9C%E9%80%9F%E9%80%92%EF%BC%9AHTTP%E7%9A%84%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6.html)）
+- ssl模块实现了SSL/TLS协议支持，读取磁盘上的证书和私钥，实现TLS握手和SNI、ALPN等扩展功能；（ [安全篇](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/23%20-%20%E5%86%B7%E9%93%BE%E5%91%A8%E8%BD%AC%EF%BC%9AHTTP%E7%9A%84%E7%BC%93%E5%AD%98%E4%BB%A3%E7%90%86.html)）
+- http\_v2模块实现了完整的HTTP/2协议。（ [飞翔篇](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/31%20-%20%E6%97%B6%E4%BB%A3%E4%B9%8B%E9%A3%8E%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%9AHTTP-2%E7%89%B9%E6%80%A7%E6%A6%82%E8%A7%88.html)）
 
 在这张图里，你还可以看到limit\_conn、limit\_req、access、log等其他模块，它们实现的是限流限速、访问控制、日志等功能，不在HTTP协议规定之内，但对于运行在现实世界的Web服务器却是必备的。
 

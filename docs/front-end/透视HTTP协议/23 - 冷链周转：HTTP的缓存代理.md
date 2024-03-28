@@ -1,7 +1,7 @@
 
 # 23 - 冷链周转：HTTP的缓存代理
 
-在 [第20讲](https://time.geekbang.org/column/article/106804) 中，我介绍了HTTP的缓存控制， [第21讲](https://time.geekbang.org/column/article/107577) 我介绍了HTTP的代理服务。那么，把这两者结合起来就是这节课所要说的“ **缓存代理**”，也就是支持缓存控制的代理服务。
+在 [第20讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/20%20-%20%E8%AE%A9%E6%88%91%E7%9F%A5%E9%81%93%E4%BD%A0%E6%98%AF%E8%B0%81%EF%BC%9AHTTP%E7%9A%84Cookie%E6%9C%BA%E5%88%B6.html) 中，我介绍了HTTP的缓存控制， [第21讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/21%20-%20%E7%94%9F%E9%B2%9C%E9%80%9F%E9%80%92%EF%BC%9AHTTP%E7%9A%84%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6.html) 我介绍了HTTP的代理服务。那么，把这两者结合起来就是这节课所要说的“ **缓存代理**”，也就是支持缓存控制的代理服务。
 
 之前谈到缓存时，主要讲了客户端（浏览器）上的缓存控制，它能够减少响应时间、节约带宽，提升客户端的用户体验。
 
@@ -37,7 +37,7 @@ HTTP的服务器缓存功能主要由代理服务器来实现（即缓存代理�
 
 ## 源服务器的缓存控制
 
-[第20讲](https://time.geekbang.org/column/article/106804) 介绍了4种服务器端的“Cache-Control”属性：max-age、no-store、no-cache和must-revalidate，你应该还有印象吧？
+[第20讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/20%20-%20%E8%AE%A9%E6%88%91%E7%9F%A5%E9%81%93%E4%BD%A0%E6%98%AF%E8%B0%81%EF%BC%9AHTTP%E7%9A%84Cookie%E6%9C%BA%E5%88%B6.html) 介绍了4种服务器端的“Cache-Control”属性：max-age、no-store、no-cache和must-revalidate，你应该还有印象吧？
 
 这4种缓存属性可以约束客户端，也可以约束代理。
 
@@ -77,7 +77,7 @@ HTTP的服务器缓存功能主要由代理服务器来实现（即缓存代理�
 
 ![](/front-end/透视HTTP/47c1a69c800439e478c7a4ed40b8b992.png)
 
-max-age、no-store、no-cache这三个属性在 [第20讲](https://time.geekbang.org/column/article/106804) 已经介绍过了，它们也是同样作用于代理和源服务器。
+max-age、no-store、no-cache这三个属性在 [第20讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/20%20-%20%E8%AE%A9%E6%88%91%E7%9F%A5%E9%81%93%E4%BD%A0%E6%98%AF%E8%B0%81%EF%BC%9AHTTP%E7%9A%84Cookie%E6%9C%BA%E5%88%B6.html) 已经介绍过了，它们也是同样作用于代理和源服务器。
 
 关于缓存的生存时间，多了两个新属性“ **max-stale**”和“ **min-fresh**”。
 
@@ -103,7 +103,7 @@ max-age、no-store、no-cache这三个属性在 [第20讲](https://time.geekbang
 
 缓存代理的知识就快讲完了，下面再简单说两个相关的问题。
 
-第一个是“ **Vary**”字段，在 [第15讲](https://time.geekbang.org/column/article/104024) 曾经说过，它是内容协商的结果，相当于报文的一个版本标记。
+第一个是“ **Vary**”字段，在 [第15讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/15%20-%20HTTP%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BC%98%E7%82%B9%EF%BC%9F%E5%8F%88%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BC%BA%E7%82%B9%EF%BC%9F.html) 曾经说过，它是内容协商的结果，相当于报文的一个版本标记。
 
 同一个请求，经过内容协商后可能会有不同的字符集、编码、浏览器等版本。比如，“Vary: Accept-Encoding”“Vary: User-Agent”，缓存代理必须要存储这些不同的版本。
 

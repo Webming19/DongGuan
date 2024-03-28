@@ -58,7 +58,7 @@ HTTP协议不是一个孤立的协议，需要下层很多其他协议的配合�
 
 我在GitHub上为本专栏开了一个项目： [http\_study](https://github.com/chronolaw/http_study.git)，可以直接用“git clone”下载，或者去Release页面，下载打好的 [压缩包](https://github.com/chronolaw/http_study/releases)。
 
-我使用的操作环境是Windows 10，如果你用的是Mac或者Linux，可以用VirtualBox等虚拟机软件安装一个Windows虚拟机，再在里面操作（或者可以到“答疑篇”的 [Linux/Mac实验环境搭建](https://time.geekbang.org/column/article/146833) 中查看搭建方法）。
+我使用的操作环境是Windows 10，如果你用的是Mac或者Linux，可以用VirtualBox等虚拟机软件安装一个Windows虚拟机，再在里面操作（或者可以到“答疑篇”的 [Linux/Mac实验环境搭建](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/42%20-%20Linux-Mac%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B8%8EURI%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0.html) 中查看搭建方法）。
 
 首先你要获取 **最新** 的http\_study项目源码，假设clone或解压的目录是“D:\\http\_study”，操作完成后大概是下图这个样子。
 

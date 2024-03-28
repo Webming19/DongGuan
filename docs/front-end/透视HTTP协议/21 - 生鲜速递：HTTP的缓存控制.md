@@ -79,7 +79,7 @@ Ctrl+F5的“强制刷新”又是什么样的呢？
 
 别着急，试着点一下浏览器的“前进”“后退”按钮，再看开发者工具，你就会惊喜地发现“from disk cache”的字样，意思是没有发送网络请求，而是读取的磁盘上的缓存。
 
-另外，如果用 [第18讲](https://time.geekbang.org/column/article/105614) 里的重定向跳转功能，也可以发现浏览器使用了缓存：
+另外，如果用 [第18讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/18%20-%20%E6%8E%92%E9%98%9F%E4%B9%9F%E8%A6%81%E8%AE%B2%E6%95%88%E7%8E%87%EF%BC%9AHTTP%E7%9A%84%E8%BF%9E%E6%8E%A5%E7%AE%A1%E7%90%86.html) 里的重定向跳转功能，也可以发现浏览器使用了缓存：
 
 ```
 http://www.chrono.com/18-1?dst=20-1

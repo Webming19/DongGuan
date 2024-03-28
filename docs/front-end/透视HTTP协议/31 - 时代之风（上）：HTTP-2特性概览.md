@@ -1,13 +1,13 @@
 
 # 31 - 时代之风（上）：HTTP-2特性概览
 
-在 [第14讲](https://time.geekbang.org/column/article/103746) 里，我们看到HTTP有两个主要的缺点：安全不足和性能不高。
+在 [第14讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/14%20-%20HTTP%E6%9C%89%E5%93%AA%E4%BA%9B%E7%89%B9%E7%82%B9%EF%BC%9F.html) 里，我们看到HTTP有两个主要的缺点：安全不足和性能不高。
 
-刚结束的“安全篇”里的HTTPS，通过引入SSL/TLS在安全上达到了“极致”，但在性能提升方面却是乏善可陈，只优化了握手加密的环节，对于整体的数据传输没有提出更好的改进方案，还只能依赖于“长连接”这种“落后”的技术（参见 [第17讲](https://time.geekbang.org/column/article/104949)）。
+刚结束的“安全篇”里的HTTPS，通过引入SSL/TLS在安全上达到了“极致”，但在性能提升方面却是乏善可陈，只优化了握手加密的环节，对于整体的数据传输没有提出更好的改进方案，还只能依赖于“长连接”这种“落后”的技术（参见 [第17讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/17%20-%20%E6%8A%8A%E5%A4%A7%E8%B1%A1%E8%A3%85%E8%BF%9B%E5%86%B0%E7%AE%B1%EF%BC%9AHTTP%E4%BC%A0%E8%BE%93%E5%A4%A7%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95.html)）。
 
 所以，在HTTPS逐渐成熟之后，HTTP就向着性能方面开始“发力”，走出了另一条进化的道路。
 
-在 [第1讲](https://time.geekbang.org/column/article/97837) 的HTTP历史中你也看到了，“秦失其鹿，天下共逐之”，Google率先发明了SPDY协议，并应用于自家的浏览器Chrome，打响了HTTP性能优化的“第一枪”。
+在 [第1讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/01%20-%20%E5%BC%80%E7%AF%87%E8%AF%8D-To%20Be%20a%20HTTP%20Hero.html) 的HTTP历史中你也看到了，“秦失其鹿，天下共逐之”，Google率先发明了SPDY协议，并应用于自家的浏览器Chrome，打响了HTTP性能优化的“第一枪”。
 
 随后互联网标准化组织IETF以SPDY为基础，综合其他多方的意见，终于推出了HTTP/1的继任者，也就是今天的主角“HTTP/2”，在性能方面有了一个大的飞跃。
 
@@ -63,7 +63,7 @@
 
 它把TCP协议的部分特性挪到了应用层，把原来的“Header+Body”的消息“打散”为数个小片的 **二进制“帧”**（Frame），用“HEADERS”帧存放头数据、“DATA”帧存放实体数据。
 
-这种做法有点像是“Chunked”分块编码的方式（参见 [第16讲](https://time.geekbang.org/column/article/104456)），也是“化整为零”的思路，但HTTP/2数据分帧后“Header+Body”的报文结构就完全消失了，协议看到的只是一个个的“碎片”。
+这种做法有点像是“Chunked”分块编码的方式（参见 [第16讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/16%20-%20%E6%B5%B7%E7%BA%B3%E7%99%BE%E5%B7%9D%EF%BC%9AHTTP%E7%9A%84%E5%AE%9E%E4%BD%93%E6%95%B0%E6%8D%AE.html)），也是“化整为零”的思路，但HTTP/2数据分帧后“Header+Body”的报文结构就完全消失了，协议看到的只是一个个的“碎片”。
 
 ![](/front-end/透视HTTP/8fe2cbd57410299a1a36d7eb105ea896.png)
 

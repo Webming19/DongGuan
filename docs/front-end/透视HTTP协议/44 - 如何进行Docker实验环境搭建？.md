@@ -90,7 +90,7 @@ root@8932f62c972:/#
 
 ```
 
-项目的源码我放在了root用户目录下，你可以直接进入“ **http\_study/www**”目录，然后执行“ **run.sh**”启动OpenResty服务（可参考 [第41讲](https://time.geekbang.org/column/article/146833)）。
+项目的源码我放在了root用户目录下，你可以直接进入“ **http\_study/www**”目录，然后执行“ **run.sh**”启动OpenResty服务（可参考 [第41讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/41%20-%20HTTP%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E9%9D%A2%E9%9D%A2%E8%A7%82%EF%BC%88%E4%B8%8B%EF%BC%89.html)）。
 
 ```
 cd ~/http_study/www
@@ -130,7 +130,7 @@ cd ~/http_study/www
 
 不过在开始之前，我要提醒你一点，因为这个Docker镜像是基于Linux的，没有图形界面，所以只能用命令行（比如telnet、curl）来访问HTTP服务。当然你也可以查一下资料，让容器对外暴露80等端口（比如使用参数“–net=host”），在外部用浏览器来访问，这里我就不细说了。
 
-先来看最简单的， [第7讲](https://time.geekbang.org/column/article/100124) 里的测试实验环境，用curl来访问localhost，会输出一个文本形式的HTML文件内容。
+先来看最简单的， [第7讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/07%20-%20%E5%9F%9F%E5%90%8D%E9%87%8C%E6%9C%89%E5%93%AA%E4%BA%9B%E9%97%A8%E9%81%93%EF%BC%9F.html) 里的测试实验环境，用curl来访问localhost，会输出一个文本形式的HTML文件内容。
 
 ```
 curl http://localhost      #访问本机的HTTP服务
@@ -139,7 +139,7 @@ curl http://localhost      #访问本机的HTTP服务
 
 ![](/front-end/透视HTTP/30671d607d6cb74076c467bab1b95b1a.png)
 
-然后我们来看 [第9讲](https://time.geekbang.org/column/article/100513)，用telnet来访问HTTP服务，输入“ **telnet 127.0.0.1 80**”，回车，就进入了telnet界面。
+然后我们来看 [第9讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/09%20-%20%E9%94%AE%E5%85%A5%E7%BD%91%E5%9D%80%E5%86%8D%E6%8C%89%E4%B8%8B%E5%9B%9E%E8%BD%A6%EF%BC%8C%E5%90%8E%E9%9D%A2%E7%A9%B6%E7%AB%9F%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F.html)，用telnet来访问HTTP服务，输入“ **telnet 127.0.0.1 80**”，回车，就进入了telnet界面。
 
 Linux下的telnet操作要比Windows的容易一些，你可以直接把HTTP请求报文复制粘贴进去，再按两下回车就行了，结束telnet可以用“Ctrl+C”。
 
@@ -204,13 +204,13 @@ docker cp xxx:/tmp/a.log .   #需要指定容器的ID
 
 ```
 
-现在有了pcap文件和log文件，我们就可以用Wireshark来看网络数据，细致地分析HTTP/HTTPS通信过程了（HTTPS还需要设置一下Wireshark，见 [第26讲](https://time.geekbang.org/column/article/110354)）。
+现在有了pcap文件和log文件，我们就可以用Wireshark来看网络数据，细致地分析HTTP/HTTPS通信过程了（HTTPS还需要设置一下Wireshark，见 [第26讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/26%20-%20%E5%9B%BA%E8%8B%A5%E9%87%91%E6%B1%A4%E7%9A%84%E6%A0%B9%E6%9C%AC%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E4%B8%8E%E8%AF%81%E4%B9%A6.html)）。
 
 ![](/front-end/透视HTTP/1ab18685ca765e8050b58ee76abd3cbf.png)
 
 在这个包里，你可以清楚地看到，通信时使用的是TLS1.3协议，服务器选择的密码套件是TLS\_AES\_256\_GCM\_SHA384。
 
-掌握了tcpdump的用法之后，你也可以再参考 [第27讲](https://time.geekbang.org/column/article/110718)，改改Nginx配置文件，自己抓包仔细研究TLS1.3协议的“supported\_versions”“key\_share”“server\_name”等各个扩展协议。
+掌握了tcpdump的用法之后，你也可以再参考 [第27讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/27%20-%20%E4%BF%A1%E4%BB%BB%E5%A7%8B%E4%BA%8E%E6%8F%A1%E6%89%8B%EF%BC%9ATLS1.2%E8%BF%9E%E6%8E%A5%E8%BF%87%E7%A8%8B%E8%A7%A3%E6%9E%90)，改改Nginx配置文件，自己抓包仔细研究TLS1.3协议的“supported\_versions”“key\_share”“server\_name”等各个扩展协议。
 
 ## 小结
 

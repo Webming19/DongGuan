@@ -146,7 +146,7 @@ Handshake Protocol: Server Hello
 
 但“PSK”也不是完美的，它为了追求效率而牺牲了一点安全性，容易受到“重放攻击”（Replay attack）的威胁。黑客可以截获“PSK”的数据，像复读机那样反复向服务器发送。
 
-解决的办法是只允许安全的GET/HEAD方法（参见 [第10讲](https://time.geekbang.org/column/article/101518)），在消息里加入时间戳、“nonce”验证，或者“一次性票证”限制重放。
+解决的办法是只允许安全的GET/HEAD方法（参见 [第10讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/10%20-%20HTTP%E6%8A%A5%E6%96%87%E6%98%AF%E4%BB%80%E4%B9%88%E6%A0%B7%E5%AD%90%E7%9A%84%EF%BC%9F.html)），在消息里加入时间戳、“nonce”验证，或者“一次性票证”限制重放。
 
 ## 小结
 

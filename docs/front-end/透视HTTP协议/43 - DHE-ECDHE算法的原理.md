@@ -3,7 +3,7 @@
 
 你好，我是Chrono。
 
-在 [第26讲](https://time.geekbang.org/column/article/110354) 里，我介绍了TLS 1.2的握手过程，在Client Hello和Server Hello里用到了ECDHE算法做密钥交换，参数完全公开，但却能够防止黑客攻击，算出只有通信双方才能知道的秘密Pre-Master。
+在 [第26讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/26%20-%20%E5%9B%BA%E8%8B%A5%E9%87%91%E6%B1%A4%E7%9A%84%E6%A0%B9%E6%9C%AC%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E4%B8%8E%E8%AF%81%E4%B9%A6.html) 里，我介绍了TLS 1.2的握手过程，在Client Hello和Server Hello里用到了ECDHE算法做密钥交换，参数完全公开，但却能够防止黑客攻击，算出只有通信双方才能知道的秘密Pre-Master。
 
 这是TLS握手的关键步骤，也让很多同学不太理解，“为什么数据都是不保密的，但中间人却无法破解呢？”
 

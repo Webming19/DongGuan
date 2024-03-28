@@ -107,7 +107,7 @@ OpenResty里还有两个不同于Nginx的特殊阶段。
 
 另一个是“ **ssl阶段**”，这算得上是OpenResty的一大创举，可以在TLS握手时动态加载证书，或者发送“OCSP Stapling”。
 
-还记得 [第29讲](https://time.geekbang.org/column/article/111940) 里说的“SNI扩展”吗？Nginx可以依据“服务器名称指示”来选择证书实现HTTPS虚拟主机，但静态配置很不灵活，要编写很多雷同的配置块。虽然后来Nginx增加了变量支持，但它每次握手都要读磁盘，效率很低。
+还记得 [第29讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/29%20-%20%E8%BF%9E%E6%8E%A5%E5%A4%AA%E6%85%A2%E8%AF%A5%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9AHTTPS%E7%9A%84%E4%BC%98%E5%8C%96.html) 里说的“SNI扩展”吗？Nginx可以依据“服务器名称指示”来选择证书实现HTTPS虚拟主机，但静态配置很不灵活，要编写很多雷同的配置块。虽然后来Nginx增加了变量支持，但它每次握手都要读磁盘，效率很低。
 
 而在OpenResty里就可以使用指令“ssl\_certificate\_by\_lua”，编写Lua脚本，读取SNI名字后，直接从共享内存或者Redis里获取证书。不仅没有读盘阻塞，而且证书也是完全动态可配置的，无需修改配置文件就能够轻松支持大量的HTTPS虚拟主机。
 

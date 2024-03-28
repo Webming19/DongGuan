@@ -123,7 +123,7 @@ HTTP/2的流有哪些特点呢？我给你简单列了一下：
 
 比如说，HTTP/2在一个连接上使用多个流收发数据，那么它本身默认就会是长连接，所以永远不需要“Connection”头字段（keepalive或close）。
 
-你可以再看一下Wireshark的抓包，里面发送了两个请求“/31-1”和“/favicon.ico”，始终用的是“56095<->8443”这个连接，对比一下 [第8讲](https://time.geekbang.org/column/article/100502)，你就能够看出差异了。
+你可以再看一下Wireshark的抓包，里面发送了两个请求“/31-1”和“/favicon.ico”，始终用的是“56095<->8443”这个连接，对比一下 [第8讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/08%20-%20%E8%87%AA%E5%B7%B1%E5%8A%A8%E6%89%8B%EF%BC%8C%E6%90%AD%E5%BB%BAHTTP%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83.html)，你就能够看出差异了。
 
 又比如，下载大文件的时候想取消接收，在HTTP/1里只能断开TCP连接重新“三次握手”，成本很高，而在HTTP/2里就可以简单地发送一个“RST\_STREAM”中断流，而长连接会继续保持。
 

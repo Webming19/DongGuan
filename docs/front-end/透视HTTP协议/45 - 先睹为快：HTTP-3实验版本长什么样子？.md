@@ -72,7 +72,7 @@ QUIC的底层是UDP，所以在抓包的时候过滤器要设置成“udp port 4
 
 ![](/front-end/透视HTTP/6d217ee87e1f777d432059f81fc2f5d4.png)
 
-因为HTTP/3内置了TLS加密（可参考之前的 [第32讲](https://time.geekbang.org/column/article/115564)），所以用Wireshark抓包后看到的数据大部分都是乱码，想要解密看到真实数据就必须设置SSLKEYLOG（参考 [第26讲](https://time.geekbang.org/column/article/110354)）。
+因为HTTP/3内置了TLS加密（可参考之前的 [第32讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/32%20-%20%E6%97%B6%E4%BB%A3%E4%B9%8B%E9%A3%8E%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9AHTTP-2%E5%86%85%E6%A0%B8%E5%89%96%E6%9E%90.html)），所以用Wireshark抓包后看到的数据大部分都是乱码，想要解密看到真实数据就必须设置SSLKEYLOG（参考 [第26讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/26%20-%20%E5%9B%BA%E8%8B%A5%E9%87%91%E6%B1%A4%E7%9A%84%E6%A0%B9%E6%9C%AC%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E4%B8%8E%E8%AF%81%E4%B9%A6.html)）。
 
 不过非常遗憾，不知道是什么原因，虽然我导出了SSLKEYLOG，但在Wireshark里还是无法解密HTTP/3的数据，显示解密错误。但同样的设置和操作步骤，抓包解密HTTPS和HTTP/2却是正常的，估计可能是目前Wireshark自身对HTTP/3的支持还不太完善吧。
 
@@ -98,7 +98,7 @@ QUIC包头的第一个字节是标志位，可以看到最开始建立连接会�
 
 标志位字节后面是4字节的版本号，因为目前还是草案，所以显示的是“draft-29”。再后面，是QUIC的特性之一“连接ID”，长度为20字节的十六进制字符串。
 
-这里我要特别提醒你注意，因为标准版本的演变，这个格式已经与当初 [第32讲](https://time.geekbang.org/column/article/115564) 的内容（draft-20）完全不一样了，在分析查看的时候一定要使用 [对应的RFC文档](https://tools.ietf.org/html/draft-ietf-quic-transport-28#section-17.2)。
+这里我要特别提醒你注意，因为标准版本的演变，这个格式已经与当初 [第32讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/32%20-%20%E6%97%B6%E4%BB%A3%E4%B9%8B%E9%A3%8E%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9AHTTP-2%E5%86%85%E6%A0%B8%E5%89%96%E6%9E%90.html) 的内容（draft-20）完全不一样了，在分析查看的时候一定要使用 [对应的RFC文档](https://tools.ietf.org/html/draft-ietf-quic-transport-28#section-17.2)。
 
 往下再看，是QUIC的CRYPTO帧，用来传输握手消息，帧类型是0x06：
 

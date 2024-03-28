@@ -37,7 +37,7 @@
 
 所以CDN投入了大笔资金，在全国、乃至全球的各个大枢纽城市都建立了机房，部署了大量拥有高存储高带宽的节点，构建了一个专用网络。这个网络是跨运营商、跨地域的，虽然内部也划分成多个小网络，但它们之间用高速专有线路连接，是真正的“信息高速公路”，基本上可以认为不存在网络拥堵。
 
-有了这个高速的专用网之后，CDN就要“分发”源站的“内容”了，用到的就是在 [第22讲](https://time.geekbang.org/column/article/108313) 说过的“ **缓存代理**”技术。使用“推”或者“拉”的手段，把源站的内容逐级缓存到网络的每一个节点上。
+有了这个高速的专用网之后，CDN就要“分发”源站的“内容”了，用到的就是在 [第22讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/22%20-%20%E8%89%AF%E5%BF%83%E4%B8%AD%E9%97%B4%E5%95%86%EF%BC%9AHTTP%E7%9A%84%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1.html) 说过的“ **缓存代理**”技术。使用“推”或者“拉”的手段，把源站的内容逐级缓存到网络的每一个节点上。
 
 于是，用户在上网的时候就不直接访问源站，而是访问离他“最近的”一个CDN节点，术语叫“ **边缘节点**”（edge node），其实就是缓存了源站内容的代理服务器，这样一来就省去了“长途跋涉”的时间成本，实现了“网络加速”。
 
@@ -57,13 +57,13 @@ CDN，正是把“数据传输”这件看似简单的事情“做大做强”�
 
 ## CDN的负载均衡
 
-我们再来看看CDN是具体怎么运行的，它有两个关键组成部分： **全局负载均衡** 和 **缓存系统**，对应的是DNS（ [第6讲](https://time.geekbang.org/column/article/99665)）和缓存代理（ [第21讲](https://time.geekbang.org/column/article/107577)、 [第22讲](https://time.geekbang.org/column/article/108313)）技术。
+我们再来看看CDN是具体怎么运行的，它有两个关键组成部分： **全局负载均衡** 和 **缓存系统**，对应的是DNS（ [第6讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/06%20-%20%E5%B8%B8%E8%AF%B4%E7%9A%84%E2%80%9C%E5%9B%9B%E5%B1%82%E2%80%9D%E5%92%8C%E2%80%9C%E4%B8%83%E5%B1%82%E2%80%9D%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E2%80%9C%E4%BA%94%E5%B1%82%E2%80%9D%E2%80%9C%E5%85%AD%E5%B1%82%E2%80%9D%E5%93%AA%E5%8E%BB%E4%BA%86%EF%BC%9F.html)）和缓存代理（ [第21讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/21%20-%20%E7%94%9F%E9%B2%9C%E9%80%9F%E9%80%92%EF%BC%9AHTTP%E7%9A%84%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6.html)、 [第22讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/22%20-%20%E8%89%AF%E5%BF%83%E4%B8%AD%E9%97%B4%E5%95%86%EF%BC%9AHTTP%E7%9A%84%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1.html)）技术。
 
 全局负载均衡（Global Sever Load Balance）一般简称为GSLB，它是CDN的“大脑”，主要的职责是当用户接入网络的时候在CDN专网中挑选出一个“最佳”节点提供服务，解决的是用户如何找到“最近的”边缘节点，对整个CDN网络进行“负载均衡”。
 
 ![](/front-end/透视HTTP/6c39e76d58d9f17872c83ae72908faca.png)
 
-GSLB最常见的实现方式是“ **DNS负载均衡**”，这个在 [第6讲](https://time.geekbang.org/column/article/99665) 里也说过，不过GSLB的方式要略微复杂一些。
+GSLB最常见的实现方式是“ **DNS负载均衡**”，这个在 [第6讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/06%20-%20%E5%B8%B8%E8%AF%B4%E7%9A%84%E2%80%9C%E5%9B%9B%E5%B1%82%E2%80%9D%E5%92%8C%E2%80%9C%E4%B8%83%E5%B1%82%E2%80%9D%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E2%80%9C%E4%BA%94%E5%B1%82%E2%80%9D%E2%80%9C%E5%85%AD%E5%B1%82%E2%80%9D%E5%93%AA%E5%8E%BB%E4%BA%86%EF%BC%9F.html) 里也说过，不过GSLB的方式要略微复杂一些。
 
 原来没有CDN的时候，权威DNS返回的是网站自己服务器的实际IP地址，浏览器收到DNS解析结果后直连网站。
 

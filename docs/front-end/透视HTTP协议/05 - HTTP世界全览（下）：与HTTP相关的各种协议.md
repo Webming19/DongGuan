@@ -25,7 +25,7 @@ TCP/IP协议实际上是一系列网络通信协议的统称，其中最核心�
 
 “可靠”是指保证数据不丢失，“字节流”是指保证数据完整，所以在TCP协议的两端可以如同操作文件一样访问传输的数据，就像是读写在一个密闭的管道里“流动”的字节。
 
-在 [第2讲](https://time.geekbang.org/column/article/98128) 时我曾经说过，HTTP是一个"传输协议"，但它不关心寻址、路由、数据完整性等传输细节，而要求这些工作都由下层来处理。因为互联网上最流行的是TCP/IP协议，而它刚好满足HTTP的要求，所以互联网上的HTTP协议就运行在了TCP/IP上，HTTP也就可以更准确地称为“ **HTTP over TCP/IP**”。
+在 [第2讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/02%20-%20%E6%97%B6%E5%8A%BF%E4%B8%8E%E8%8B%B1%E9%9B%84%EF%BC%9AHTTP%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F.html) 时我曾经说过，HTTP是一个"传输协议"，但它不关心寻址、路由、数据完整性等传输细节，而要求这些工作都由下层来处理。因为互联网上最流行的是TCP/IP协议，而它刚好满足HTTP的要求，所以互联网上的HTTP协议就运行在了TCP/IP上，HTTP也就可以更准确地称为“ **HTTP over TCP/IP**”。
 
 ## DNS
 

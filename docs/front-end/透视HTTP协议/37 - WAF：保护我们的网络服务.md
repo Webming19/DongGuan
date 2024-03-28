@@ -27,7 +27,7 @@
 
 另一种“ **HTTP头注入**”攻击的方式也是类似的原理，它在“Host”“User-Agent”“X-Forwarded-For”等字段里加入了恶意数据或代码，服务端程序如果解析不当，就会执行预设的恶意代码。
 
-在之前的 [第19讲](https://time.geekbang.org/column/article/106034) 里，也说过一种利用Cookie的攻击手段，“ **跨站脚本**”（XSS）攻击，它属于“JS代码注入”，利用JavaScript脚本获取未设防的Cookie。
+在之前的 [第19讲](https://website.ethanhan.eu.org/DongGuan/front-end/%E9%80%8F%E8%A7%86HTTP%E5%8D%8F%E8%AE%AE/19%20-%20%E5%9B%9B%E9%80%9A%E5%85%AB%E8%BE%BE%EF%BC%9AHTTP%E7%9A%84%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E8%B7%B3%E8%BD%AC.html) 里，也说过一种利用Cookie的攻击手段，“ **跨站脚本**”（XSS）攻击，它属于“JS代码注入”，利用JavaScript脚本获取未设防的Cookie。
 
 ## 网络应用防火墙
 
